@@ -7,14 +7,18 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./create-form.component.css']
 })
 export class CreateFormComponent implements OnInit {
-  createForm : FormGroup
+  loginForm : FormGroup
   constructor() { }
 
   ngOnInit(){
-    this.createForm = new FormGroup({
-      fullname = new FormControl(),
-      email = new FormControl()
-    })
+    this.loginForm = new FormGroup({
+      fullname : new FormControl(),
+      email : new FormControl()
+    });
+  }
+
+  onSubmit() : void {
+    console.log(this.loginForm.value)
   }
 
 }
