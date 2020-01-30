@@ -12,13 +12,14 @@ export class CreateFormComponent implements OnInit {
 
   ngOnInit(){
     this.loginForm = new FormGroup({
-      fullname : new FormControl(),
+      fullname : new FormControl('enter your name here'),
       email : new FormControl()
     });
   }
 
   onSubmit() : void {
     console.log(this.loginForm.value)
+    console.log(this.loginForm.get('fullname').value)
   }
 
 }
