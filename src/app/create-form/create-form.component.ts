@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-create-form',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-form.component.css']
 })
 export class CreateFormComponent implements OnInit {
-
+  createForm : FormGroup
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.createForm = new FormGroup({
+      fullname = new FormControl(),
+      email = new FormControl()
+    })
   }
 
 }
