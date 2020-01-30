@@ -18,11 +18,13 @@ export class CreateFormComponent implements OnInit {
   }
 
   ngOnInit(){
+    
   // using form builder
     this.loginForm = this.fb.group({
       fullname: [],
       email: []
     })
+
     // with form group
     // this.loginForm = new FormGroup({
     //   fullname : new FormControl('enter your name here'),
